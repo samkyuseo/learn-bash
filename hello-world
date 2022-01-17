@@ -1,0 +1,16 @@
+#!/usr/local/bin/bash
+echo "Hello, world!"
+
+<< COMMENT
+- Run with bash interpreter
+    bash hello-world 
+
+- Run as an executable 
+    - Allow the script to be executable for user 
+        chmod +x hello-world 
+    - Interpret the file as an executable
+        which bash
+        - Add a shebang to the top of the script
+          #!enter/which/bash/output 
+        - In unix like systems a text file which a shebang is interpreted as an executable
+COMMENT
