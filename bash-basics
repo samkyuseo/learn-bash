@@ -1,0 +1,46 @@
+#!/usr/local/bin/bash 
+
+# Strings 
+echo I am a basic string
+echo I\'m a basic string with an escaped quote
+echo "I'm a string without escaped single quote"
+echo -e "Add a -e flag to interpret backslash-escaped escaped characters:\nLike this."
+
+# Variables 
+who='World'
+echo "Hello, $who! Using variables!"
+echo "Hello, ${who}! Using variables v2!"
+
+# Shell execution 
+echo "Hello, $(whoami)"
+
+# User input 
+echo 'Who are you?'
+read who 
+echo "Hello, $who. We used user input!"
+
+# Comparison 
+# https://www.taniarascia.com/how-to-create-and-use-bash-scripts/#:~:text=Tania%20Hello%2C%20Tania!-,Comparison,-Operators%20are%20slightly
+
+# Conditionals 
+echo 'How old are you?'
+read age
+if [ $age -gt 20 ]
+then 
+    echo "You're an adult now"
+else 
+    echo "Bruh you can't drink yet"
+fi
+
+# Loops
+# for, while, and until loops are available
+echo "Files in the current dir are: "
+files="$(pwd)/*"
+for file in $files 
+do 
+    echo "$(basename $file)"
+done
+
+# Arrays 
+atomus=('Sam' 'Joel' 'Zane' 'Kaushal' 'Jamie')
+echo ${atomus[3]}
